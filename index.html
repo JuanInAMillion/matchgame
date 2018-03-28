@@ -6,15 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Match Game</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="resources/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="resources/css/style.css">
 </head>
+
 <body>
-  <h1>Match Game</h1>
+
+  <main>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3" id="instructions">
+          <h1>Match Game</h1>
+          <h6>Rules</h6>
+          <p>Click on a card to reveal the number on the other side. Click on a second card to try and find a match to the first. If you succeed, the pair will be removed from play. If not, try again!</p>
+          <h6>How to Win</h6>
+          <p>You win when all pairs have been found.</p>
+        </div>
+
+        <div class="col-lg-9" id="game">
+          <div class="row">
+            <!-- first four cards -->
+            <div class="card col-lg-3">
+              
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <!-- second four cards -->
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <!-- third four cards -->
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <!-- fourth four cards -->
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+            <div class="card col-lg-3">
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- end of .container -->
+  </main>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="./resources/js/match-game.js"></script>
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </body>
+
 </html>
