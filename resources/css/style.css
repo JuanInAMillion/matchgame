@@ -31,13 +31,14 @@ p {
 /* game */
 
 .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(32, 64, 86);
   border: 4px solid #fff;
   border-radius: 8px;
   color: rgb(255, 255, 255);
   cursor: pointer;
-  display: flex;
-  align-items: center;
   font-size: 7rem;
   font-weight: 900;
   height: 12.5rem;
