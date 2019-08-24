@@ -29,6 +29,10 @@ p {
 }
 
 /* game */
+#game {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .card {
   display: flex;

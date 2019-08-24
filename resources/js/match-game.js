@@ -56,7 +56,7 @@ MatchGame.renderCards = function(cardValues, $game) {
   $game.data('flippedCards', []);
 
   for (let valueIndex = 0; valueIndex < cardValues.length; valueIndex++) {
-    let $cardElement = $('<div class="col-xs-3 card"></div>');
+    let $cardElement = $('<div class="col-md-3 card"></div>');
     let value = cardValues[valueIndex];
     let color = colors[value - 1];
     const data = {
