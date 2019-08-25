@@ -4,14 +4,9 @@ body {
   background-color: rgb(219, 215, 204);
   font-size: 16px;
   font-family: 'Work Sans', sans-serif;
-  height: 100vh;
 }
 
 .container {
-  width: 100%
-}
-
-.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,33 +14,29 @@ body {
 
 .title {
   display: flex;
-  color: rgb(9, 14, 27);
+  font-family: 'Courier New';
   font-size: 2.5rem;
   margin: 3rem 0;
-  font-family: 'Courier New';
 }
 
 .letter {
-  box-shadow: 0 3px 6px 0 rgba(0,0,0,.4);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .4);
   padding: .5rem 1rem;
 }
 
 .letter:nth-child(odd) {
-  color: rgb(73, 162, 112);
   border: 1px solid rgb(73, 162, 112);
-  -ms-transform: skewY(20deg); /* IE 9 */
-  -webkit-transform: skewY(20deg); /* Safari 3-8 */
+  color: rgb(73, 162, 112);
   transform: skewY(20deg);
 }
 
 .letter:nth-child(even) {
   background-color: rgb(73, 162, 112);
-  -ms-transform: skewY(-20deg); /* IE 9 */
-  -webkit-transform: skewY(-20deg); /* Safari 3-8 */
+  color: rgb(9, 14, 27);
   transform: skewY(-20deg);
 }
 
-#game {
+.game {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -57,7 +48,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(73, 162, 112);
-  box-shadow: 3px 3px 6px 0 rgba(0,0,0,.4);
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, .4);
   margin: .25rem;
   border-radius: 8px;
   color: rgb(255, 255, 255);
@@ -65,7 +56,7 @@ body {
   font-size: 7rem;
   font-weight: 900;
   height: 8rem;
-  width: 23%;
+  width: 20%;
 }
 
 .footer {
@@ -75,28 +66,21 @@ body {
 
 /* large desktop display */
 @media only screen and (min-width: 2401px) and (max-width: 3000px) {
-  #game {
+  .game {
     width: 30%;
   }
 }
 
 /* tablet display */
 @media only screen and (max-width: 960px) {
-  #game {
+  .game {
     width: 100%;
   }
 }
 
 /* small mobile display */
 @media only screen and (max-width: 480px) {
-  .clear {
+  .sm {
     display: none;
-  }
-}
-
-/* small mobile display */
-@media only screen and (max-width: 400px) {
-  .card {
-    width: 90%
   }
 }
