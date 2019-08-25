@@ -42,21 +42,21 @@ MatchGame.generateCardValues = function () {
 
 MatchGame.renderCards = function(cardValues, $game) {
   const colors = [
-    'hsl(25, 85%, 65%)',
-    'hsl(55, 85%, 65%)',
-    'hsl(90, 85%, 65%)',
-    'hsl(160, 85%, 65%)',
-    'hsl(220, 85%, 65%)',
-    'hsl(265, 85%, 65%)',
-    'hsl(310, 85%, 65%)',
-    'hsl(365, 85%, 65%)',
+    'hsl(50, 85%, 65%)',
+    'hsl(100, 85%, 65%)',
+    'hsl(150, 5%, 5%)',
+    'hsl(200, 85%, 65%)',
+    'hsl(250, 85%, 65%)',
+    'hsl(300, 85%, 65%)',
+    'hsl(350, 85%, 65%)',
+    'hsl(400, 85%, 65%)',
   ];
 
   $game.empty();
   $game.data('flippedCards', []);
 
   for (let valueIndex = 0; valueIndex < cardValues.length; valueIndex++) {
-    let $cardElement = $('<div class="col-md-3 card"></div>');
+    let $cardElement = $('<div class="card"></div>');
     let value = cardValues[valueIndex];
     let color = colors[value - 1];
     const data = {
@@ -71,6 +71,7 @@ MatchGame.renderCards = function(cardValues, $game) {
   $('.card').click(function() {
     MatchGame.flipCard($(this), $('#game'));
   })
+
 };
 
 /*
@@ -104,13 +105,13 @@ MatchGame.flipCard = function($card, $game) {
     } else {
       
       window.setTimeout(function(){
-        card1.css('background-color', 'rgb(32, 64, 86)')
+        card1.css('background-color', 'rgb(73, 162, 112)')
       .text('')
       .data('isFlipped', false);
-      card2.css('background-color', 'rgb(32, 64, 86)')
+      card2.css('background-color', 'rgb(73, 162, 112)')
       .text('')
       .data('isFlipped', false);
-      }, 750)
+      }, 500)
       
     }
 

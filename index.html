@@ -6,39 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Match Game</title>
-  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="./resources/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="./resources/bootstrap4/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-3 col-xs-12" id="instructions">
-          <h1>Match Game</h1>
-          <h6>Rules</h6>
-          <p>Click on a to revea cardl the number on the other side. Click on a second to try a cardnd find a match to
-            the first. If you succeed, the pair will be removed from play. If not, try again!</p>
-          <h6>How to Win</h6>
-          <p>You win when all pairs have been found.</p>
-        </div>
-
-        <div class="col-md-9 col-xs-12" id="game">
-          <div class="row">
-            
-          </div>
-        </div>
-
+  <div class="container">
+    <div class="game-container">
+      <div class="title">
+        <div class="letter">M</div>
+        <div class="letter">A</div>
+        <div class="letter">T</div>
+        <div class="letter">C</div>
+        <div class="letter">H</div>
+        <div class="letter clear">G</div>
+        <div class="letter clear">A</div>
+        <div class="letter clear">M</div>
+        <div class="letter clear">E</div>
       </div>
+      <div id="game"></div>
+      <div class="footer">© 2019 Juan Alcantara</div>
     </div>
-    <!-- end of .container -->
+  </div>
+  <!-- end of .container -->
 
   <script src="./resources/js/jquery-3.2.1.min.js"></script>
   <script src="./resources/js/match-game.js"></script>
-  <script src="./resources/js/tests.js"></script>
 </body>
 
 </html>
