@@ -9,8 +9,8 @@ $(document).ready(function () {
   const $game = $('#game');
   const values = MatchGame.generateCards();
   MatchGame.renderCards(values, $game);
-  
-  $( "#restart" ).click(function() {
+
+  $("#restart").click(function () {
     const values = MatchGame.generateCards();
     MatchGame.renderCards(values, $game);
   });
@@ -84,6 +84,7 @@ MatchGame.flipCard = function ($card, $game) {
   if ($card.data('isFlipped')) {
     return;
   }
+
   $card.css('background-color', $card.data('color'))
     .text($card.data('value'))
     .data('isFlipped', true);
@@ -119,8 +120,3 @@ MatchGame.flipCard = function ($card, $game) {
   }
 
 };
-
-
-
-
-
