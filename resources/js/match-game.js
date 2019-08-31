@@ -1,4 +1,4 @@
-const Match = {};
+const MatchGame = {};
 
 /*
   Sets up a new game after HTML document has loaded.
@@ -7,23 +7,27 @@ const Match = {};
 
 $(document).ready(function () {
   const $game = $('#game');
-  const values = Match.generateCards();
-  Match.renderCards(values, $game);
+  const values = MatchGame.generateCards();
+  MatchGame.renderCards(values, $game);
+  
+  $( "#restart" ).click(function() {
+    const values = MatchGame.generateCards();
+    MatchGame.renderCards(values, $game);
+  });
 });
 
 /*
-  Generates and returns an array of matching card values.
+  Generates and returns an array of MatchGameing card values.
  */
 
-Match.generateCards = function () {
+MatchGame.generateCards = function () {
   const cardSequence = [];
+  const cardValues = [];
 
   for (let value = 1; value <= 8; value++) {
     cardSequence.push(value);
     cardSequence.push(value);
   } // [1, 1, 2, 2, ...]
-
-  const cardValues = [];
 
   while (cardSequence.length > 0) {
     let randomIndex = Math.floor(Math.random() * cardSequence.length);
@@ -32,15 +36,13 @@ Match.generateCards = function () {
   }
 
   return cardValues;
-
 };
 
 /*
-  Converts card values to jQuery card objects and adds them to the supplied game
-  object.
+  Converts card values to jQuery card objects and adds them to the game object.
 */
 
-Match.renderCards = function (cardValues, $game) {
+MatchGame.renderCards = function (cardValues, $game) {
   const colors = [
     'hsl(50, 85%, 65%)',
     'hsl(100, 85%, 65%)',
@@ -69,17 +71,16 @@ Match.renderCards = function (cardValues, $game) {
     $game.append($cardElement);
   }
   $('.card').click(function () {
-    Match.flipCard($(this), $('#game'));
+    MatchGame.flipCard($(this), $('#game'));
   })
-
 };
 
 /*
   Flips over a given card and checks to see if two cards are flipped over.
-  Updates styles on flipped cards depending whether they are a match or not.
+  Updates styles on flipped cards depending whether they are a MatchGame or not.
  */
 
-Match.flipCard = function ($card, $game) {
+MatchGame.flipCard = function ($card, $game) {
   if ($card.data('isFlipped')) {
     return;
   }
@@ -95,13 +96,13 @@ Match.flipCard = function ($card, $game) {
 
   if (flippedCards.length === 2) {
     if (firstCard.data('value') === secondCard.data('value')) {
-      const matchCSS = {
+      const MatchGameCSS = {
         backgroundColor: 'rgb(153, 153, 153)',
         color: 'rgb(204, 204, 204)',
       }
 
-      firstCard.css(matchCSS);
-      secondCard.css(matchCSS);
+      firstCard.css(MatchGameCSS);
+      secondCard.css(MatchGameCSS);
     } else {
 
       window.setTimeout(function () {
@@ -114,8 +115,12 @@ Match.flipCard = function ($card, $game) {
       }, 500)
 
     }
-
     $game.data('flippedCards', []);
   }
 
 };
+
+
+
+
+
