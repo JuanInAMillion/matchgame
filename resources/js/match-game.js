@@ -20,7 +20,7 @@ $(document).ready(function () {
   Generates and returns an array of MatchGameing card values.
  */
 
-MatchGame.generateCards = function () {
+MatchGame.generateCards = () => {
   const cardSequence = [];
   const cardValues = [];
 
@@ -42,7 +42,7 @@ MatchGame.generateCards = function () {
   Converts card values to jQuery card objects and adds them to the game object.
 */
 
-MatchGame.renderCards = function (cardValues, $game) {
+MatchGame.renderCards = (cardValues, $game) => {
   const colors = [
     'hsl(50, 85%, 65%)',
     'hsl(100, 85%, 65%)',
@@ -80,7 +80,7 @@ MatchGame.renderCards = function (cardValues, $game) {
   Updates styles on flipped cards depending whether they are a MatchGame or not.
  */
 
-MatchGame.flipCard = function ($card, $game) {
+MatchGame.flipCard = ($card, $game) => {
   if ($card.data('isFlipped')) {
     return;
   }
@@ -120,3 +120,4 @@ MatchGame.flipCard = function ($card, $game) {
   }
 
 };
+
